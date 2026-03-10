@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
 
@@ -296,12 +296,61 @@
       }
     })();
 
-    function handleSignup(e) {
+    async function handleSignup(e) {
       e.preventDefault();
       const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const input = form.querySelector('input[type="email"]');
+      const email = input.value.trim();
       const success = document.getElementById('cta-success');
-      form.style.display = 'none';
-      success.style.display = 'block';
+      const errorEl = document.getElementById('cta-error');
+
+      if (!email) return;
+
+      // Loading state
+      btn.disabled = true;
+      btn.textContent = 'Joining...';
+      if (errorEl) errorEl.style.display = 'none';
+
+      try {
+        // POST to Formsubmit.co (works on GitHub Pages and locally)
+        const res = await fetch('https://formsubmit.co/ajax/zach.wallace@protonmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            email: email,
+            _subject: 'Juniper Waitlist Signup',
+            _captcha: 'false',
+            _template: 'box',
+          }),
+        });
+
+        if (!res.ok) throw new Error('Form service error');
+
+        // Also store locally if running on the Juniper dashboard
+        if (window.location.port === '8080') {
+          fetch('/api/waitlist', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email }),
+          }).catch(() => {}); // Silent fallback, Formsubmit is primary
+        }
+
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Join the Waitlist';
+        if (!errorEl) {
+          const p = document.createElement('p');
+          p.id = 'cta-error';
+          p.className = 'cta__error';
+          p.textContent = 'Something went wrong. Try again in a moment.';
+          form.after(p);
+        } else {
+          errorEl.style.display = 'block';
+        }
+      }
     }
 
     // Intersection Observer for fade-in animations
