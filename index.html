@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juniper &mdash; Your Friendships, Handled</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <svg class="nav__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L7.5 9h2L5 16h14l-4.5-7h2L12 2z"/><rect x="10.5" y="16" width="3" height="4" rx=".5"/></svg>
+        Juniper
+      </a>
+      <div class="nav__links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#brief">Weekly Brief</a>
+        <a href="#signup" class="btn btn--sm">Get Early Access</a>
+      </div>
+      <div class="nav__right">
+        <button class="theme-toggle" aria-label="Toggle theme" onclick="toggleTheme()">
+          <svg class="theme-toggle__dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="theme-toggle__light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__mobile" aria-label="Menu" onclick="document.querySelector('.nav__links').classList.toggle('open')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="container">
+      <div class="hero__badge">Personal Friend CRM</div>
+      <h1 class="hero__title">Your friendships,<br /><span class="gradient-text">handled.</span></h1>
+      <p class="hero__sub">Juniper lives in Telegram and remembers everything about the people you care about. Birthdays, life updates, who you owe a call. Just text naturally and let Juniper keep score.</p>
+      <div class="hero__cta">
+        <a href="#signup" class="btn btn--lg">Get Early Access</a>
+        <a href="#how-it-works" class="btn btn--lg btn--ghost">See How It Works</a>
+      </div>
+      <div class="hero__proof">
+        <span class="hero__dot"></span>
+        Join the waitlist. Launching soon.
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF STRIP -->
+  <section class="strip">
+    <div class="container strip__inner">
+      <div class="strip__item">
+        <strong>Zero apps to install</strong>
+        <span>Lives in Telegram</span>
+      </div>
+      <div class="strip__sep"></div>
+      <div class="strip__item">
+        <strong>AI-powered</strong>
+        <span>Natural language, no commands</span>
+      </div>
+      <div class="strip__sep"></div>
+      <div class="strip__item">
+        <strong>Web dashboard</strong>
+        <span>Visual relationship map</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label">Features</div>
+      <h2 class="section-title">Everything you need to<br />never drop the ball again</h2>
+      <div class="features__grid">
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Natural Language Logging</h3>
+          <p>Just text like you'd text a friend. "Had coffee with Sarah, she's thinking about moving to Austin." Juniper extracts the who, what, when, and life updates automatically.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Smart Reminders</h3>
+          <p>"Remind me to check in with Mike next week." Set it and forget it. Juniper will surface it when it matters, in your brief and on your dashboard.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Relationship Tiers</h3>
+          <p>Organize your people into inner circle, close friends, and orbit. Juniper tracks contact frequency and flags when someone's overdue for a check-in.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>Semantic Search</h3>
+          <p>"Who was thinking about changing jobs?" Search by meaning, not keywords. Juniper understands context and finds the right people even from fuzzy queries.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Web Dashboard</h3>
+          <p>A visual command center for your social life. Browse contacts, view interaction timelines, copy draft messages, and explore your relationship map.</p>
+        </div>
+
+        <div class="card">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </div>
+          <h3>Full Undo Support</h3>
+          <p>Logged the wrong thing? Merged the wrong contacts? Every action is reversible. Just say "undo" and Juniper rolls it back, no questions asked.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Three steps. That's it.</h2>
+      <div class="how__steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <h3>Text Juniper</h3>
+          <p>Open Telegram and talk to Juniper like a friend. Add people, log hangouts, set reminders. No forms, no menus, just conversation.</p>
+        </div>
+        <div class="step__line"></div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <h3>Juniper Remembers</h3>
+          <p>Every detail gets parsed, organized, and stored. Life updates, birthdays, jobs, interests. Juniper builds a living profile of every person in your world.</p>
+        </div>
+        <div class="step__line"></div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <h3>Stay Connected</h3>
+          <p>Get a weekly brief every Monday with who to reach out to, ready-to-send messages, upcoming birthdays, and reminders. Copy, paste, send.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAT DEMO -->
+  <section class="demo">
+    <div class="container">
+      <div class="section-label">In Action</div>
+      <h2 class="section-title">It feels like texting a friend<br />who never forgets anything</h2>
+      <div class="chat">
+        <div class="chat__msg chat__msg--user">
+          <div class="chat__bubble">Had lunch with Sarah yesterday. She got promoted to Senior Engineer and is thinking about moving to Denver.</div>
+        </div>
+        <div class="chat__msg chat__msg--agent">
+          <div class="chat__name">Juniper</div>
+          <div class="chat__bubble">Got it. Logged a meal with Sarah Chen yesterday. Life updates noted: promoted to Senior Engineer, considering a move to Denver. That's a big deal on both counts.</div>
+        </div>
+        <div class="chat__msg chat__msg--user">
+          <div class="chat__bubble">Remind me to congratulate her properly next week</div>
+        </div>
+        <div class="chat__msg chat__msg--agent">
+          <div class="chat__name">Juniper</div>
+          <div class="chat__bubble">Reminder set for Sarah Chen on March 16. I'll make sure it shows up in your brief. She deserves a good one.</div>
+        </div>
+        <div class="chat__msg chat__msg--user">
+          <div class="chat__bubble">Who haven't I talked to in a while?</div>
+        </div>
+        <div class="chat__msg chat__msg--agent">
+          <div class="chat__name">Juniper</div>
+          <div class="chat__bubble">
+            Here's who could use some love:<br /><br />
+            <strong>Mike Torres</strong> (inner circle) &mdash; 34 days, overdue<br />
+            <strong>James Park</strong> (close) &mdash; 52 days, overdue<br />
+            <strong>Lisa Huang</strong> (close) &mdash; 48 days, overdue<br /><br />
+            Mike's the priority. Inner circle people shouldn't go that long without hearing from you.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKLY BRIEF -->
+  <section class="brief" id="brief">
+    <div class="container">
+      <div class="brief__layout">
+        <div class="brief__text">
+          <div class="section-label">Weekly Brief</div>
+          <h2 class="section-title" style="text-align:left">Monday mornings,<br />sorted</h2>
+          <p>Every Monday at 8am, Juniper drops a brief in your Telegram with everything you need to stay on top of your relationships. Who's overdue, whose birthday is coming up, and draft messages you can copy and send in seconds.</p>
+          <ul class="brief__list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Prioritized reach-out list based on tier and recency
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Ready-to-copy draft messages tailored to each person
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Upcoming birthdays and pending reminders
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Quick wins for low-effort, high-impact check-ins
+            </li>
+          </ul>
+        </div>
+        <div class="brief__card">
+          <div class="brief__card-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Weekly Brief &mdash; March 9
+          </div>
+          <div class="brief__card-body">
+            <div class="brief__section">
+              <strong>Reach Out This Week</strong>
+              <div class="brief__row"><span class="brief__name">Mike Torres</span><span class="brief__tag brief__tag--urgent">34d overdue</span></div>
+              <div class="brief__row"><span class="brief__name">James Park</span><span class="brief__tag">52d</span></div>
+              <div class="brief__row"><span class="brief__name">Lisa Huang</span><span class="brief__tag">48d</span></div>
+            </div>
+            <div class="brief__section">
+              <strong>Draft Messages</strong>
+              <div class="brief__draft">"Hey Mike, been a minute. How's the new apartment treating you? We should grab food soon."<button class="brief__copy">Copy</button></div>
+            </div>
+            <div class="brief__section">
+              <strong>Birthdays This Week</strong>
+              <div class="brief__row"><span class="brief__name">Sarah Chen</span><span class="brief__tag brief__tag--bday">Mar 12</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / SIGNUP -->
+  <section class="cta" id="signup">
+    <div class="container">
+      <div class="cta__glow"></div>
+      <h2 class="section-title">Stop forgetting.<br />Start showing up.</h2>
+      <p class="cta__sub">Juniper is launching soon. Drop your email and be the first to know.</p>
+      <form class="cta__form" onsubmit="handleSignup(event)">
+        <input type="email" placeholder="you@example.com" required class="cta__input" />
+        <button type="submit" class="btn btn--lg">Join the Waitlist</button>
+      </form>
+      <p class="cta__fine">Free to use during early access. No spam, ever.</p>
+      <div class="cta__success" id="cta-success">
+        You're on the list. We'll be in touch.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <svg class="footer__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L7.5 9h2L5 16h14l-4.5-7h2L12 2z"/><rect x="10.5" y="16" width="3" height="4" rx=".5"/></svg>
+        Juniper
+      </div>
+      <div class="footer__copy">&copy; 2026 Juniper. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('juniper-theme', next);
+    }
+
+    // Apply saved theme on load
+    (function() {
+      const saved = localStorage.getItem('juniper-theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+
+    function handleSignup(e) {
+      e.preventDefault();
+      const form = e.target;
+      const success = document.getElementById('cta-success');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card, .step, .chat__msg, .brief__layout').forEach(el => {
+      el.classList.add('animate');
+      observer.observe(el);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.querySelector('.nav__links').classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
