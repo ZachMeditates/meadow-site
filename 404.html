@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found &mdash; Juniper Friends</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=10" />
+  <style>
+    .notfound {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+    }
+    .notfound__code {
+      font-size: 6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      opacity: 0.15;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .notfound h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .notfound p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <svg class="nav__icon" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="Juniper Friends logo"><path d="M12 2L7.5 9h2L5 16h14l-4.5-7h2L12 2z"/><rect x="10.5" y="16" width="3" height="4" rx=".5"/></svg>
+        Juniper Friends
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="notfound">
+      <div>
+        <div class="notfound__code">404</div>
+        <h1>This page wandered off</h1>
+        <p>We checked, but there is nothing here. Maybe it moved, maybe it never existed.</p>
+        <a href="/" class="btn btn--lg">Back to Juniper Friends</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <div class="footer__copy">&copy; 2026 Juniper Friends. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('juniper-theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
+
+</body>
+</html>

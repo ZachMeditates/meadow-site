@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zachmeditates.github.io/juniper-site/sitemap.xml
