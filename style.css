@@ -520,6 +520,99 @@ a { color: inherit; text-decoration: none; }
 }
 
 
+/* ---- COMPARE: Old Way vs Juniper ---- */
+.compare {
+  padding: 0 0 80px;
+}
+
+.compare__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.compare__col {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+}
+
+.compare__col--new {
+  border-color: var(--green-500);
+  border-width: 2px;
+}
+
+.compare__heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.compare__col--old .compare__heading {
+  color: var(--text-muted);
+}
+
+.compare__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.compare__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.compare__col--old .compare__list li {
+  color: var(--text-faint);
+}
+
+.compare__col--new .compare__list li {
+  color: var(--text-secondary);
+}
+
+.compare__list svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.compare__col--old .compare__list svg {
+  color: var(--text-dim);
+}
+
+.compare__col--new .compare__list svg {
+  color: var(--green-400);
+}
+
+[data-theme="light"] .compare__col {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .compare__col--new .compare__list svg {
+  color: var(--green-600);
+}
+
+@media (max-width: 640px) {
+  .compare__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare__col {
+    padding: 24px 20px;
+  }
+}
+
+
 /* ---- HOW IT WORKS: Alternating Horizontal Steps ---- */
 .how {
   padding: 100px 0 120px;
@@ -1319,6 +1412,249 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.9rem;
   color: #ef4444;
   margin-top: 12px;
+}
+
+
+/* ---- VS-MONICA PAGE ---- */
+.vs-hero {
+  text-align: center;
+  padding: 160px 0 60px;
+}
+
+.vs-hero__title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.vs-hero__sub {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+.vs-respect {
+  padding: 0 0 60px;
+}
+
+.vs-respect__text {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--text-faint);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Feature comparison table */
+.vs-table-section {
+  padding: 60px 0 80px;
+}
+
+.vs-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vs-table {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.vs-table th {
+  padding: 14px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-bright);
+}
+
+.vs-table th.vs-table__juniper {
+  color: var(--green-500);
+}
+
+.vs-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.vs-table td.vs-table__feature {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.vs-table td.vs-table__juniper {
+  color: var(--text-secondary);
+}
+
+.vs-table tbody tr:hover {
+  background: var(--bg-card-hover);
+}
+
+.vs-check {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.vs-check--yes { background: var(--green-500); }
+.vs-check--no { background: #ef4444; }
+.vs-check--neutral { background: var(--gray-400); }
+
+/* Key differences cards */
+.vs-diffs {
+  padding: 80px 0;
+}
+
+.vs-diffs__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vs-diffs__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+}
+
+.vs-diffs__card:hover {
+  border-color: var(--border-bright);
+  transform: translateY(-2px);
+}
+
+.vs-diffs__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.vs-diffs__icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--green-400);
+}
+
+.vs-diffs__card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.vs-diffs__card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Honest section */
+.vs-honest {
+  padding: 80px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(34, 197, 94, 0.02) 50%, transparent 100%);
+}
+
+.vs-honest__sub {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: -32px;
+  margin-bottom: 48px;
+}
+
+.vs-honest__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.vs-honest__item {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.vs-honest__item strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.vs-honest__item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.vs-faq {
+  padding: 80px 0;
+}
+
+[data-theme="light"] .vs-diffs__card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .vs-diffs__card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .vs-diffs__icon {
+  background: rgba(34, 197, 94, 0.08);
+}
+
+[data-theme="light"] .vs-diffs__icon svg {
+  color: var(--green-600);
+}
+
+[data-theme="light"] .vs-honest__item {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 640px) {
+  .vs-diffs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-honest__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vs-table {
+    font-size: 0.82rem;
+  }
+
+  .vs-table th,
+  .vs-table td {
+    padding: 10px 12px;
+  }
 }
 
 

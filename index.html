@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -104,10 +104,10 @@
       },
       {
         "@type": "Question",
-        "name": "How does Juniper compare to Monica, Dex, or Clay?",
+        "name": "How is Juniper different from other personal CRM apps?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most personal CRMs require you to fill out forms and manually enter data. Juniper is conversational: you text it naturally, like talking to a friend, and it extracts the details automatically. It also lives in Telegram so there is no new app to install, and it generates AI-drafted messages in your weekly brief."
+          "text": "Most personal CRM apps require you to open a web app and fill out forms. Juniper is conversational: you text it naturally and it extracts the details automatically. It also lives in Telegram so there is no new app to install, it notices when you are losing touch with someone, and it writes the first message for you in your weekly brief."
         }
       },
       {
@@ -214,7 +214,7 @@
     <div class="container hero__split">
       <div class="hero__text">
         <h1 class="hero__title">Never forget to check in on the people you care about.</h1>
-        <p class="hero__sub">Text Juniper about your friends and it remembers everything. Birthdays, life updates, who you haven't talked to in a while. Every week, it tells you who to reach out to and what to say.</p>
+        <p class="hero__sub">Text Juniper about your friends and it remembers everything. Birthdays, life updates, who you haven't talked to in a while. It notices when you're losing touch and writes the first message for you.</p>
         <div class="hero__cta">
           <a href="#signup" class="btn btn--lg">Get Early Access</a>
         </div>
@@ -244,6 +244,57 @@
   <section class="problem">
     <div class="container">
       <p class="problem__text">You said you'd call them back. That was three weeks ago. You forgot your college roommate's kid's name. Again. You meant to check in after their surgery but life got in the way. It's not that you don't care. It's that nobody can keep track of 50 relationships in their head.</p>
+    </div>
+  </section>
+
+
+  <!-- COMPARISON: Old Way vs Juniper -->
+  <section class="compare" id="compare">
+    <div class="container">
+      <div class="compare__grid">
+        <div class="compare__col compare__col--old">
+          <h3 class="compare__heading">The old way</h3>
+          <ul class="compare__list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              Open an app, fill out forms
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              Remember to check it yourself
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              Stores data, but never acts on it
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              You still forget to reach out
+            </li>
+          </ul>
+        </div>
+        <div class="compare__col compare__col--new">
+          <h3 class="compare__heading">The Juniper way</h3>
+          <ul class="compare__list">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Text naturally, Juniper extracts the details
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Juniper notices when you're losing touch
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Weekly brief with who to call and what to say
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              Writes the first message for you
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -538,11 +589,11 @@
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>How does Juniper compare to Monica, Dex, or Clay?</span>
+            <span>How is Juniper different from other personal CRM apps?</span>
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq__answer">
-            <p>Most personal CRMs require you to fill out forms and manually enter data. Juniper is conversational: you text it naturally, like talking to a friend, and it extracts the details automatically. It also lives in Telegram so there is no new app to install, and it generates AI-drafted messages in your weekly brief.</p>
+            <p>Most personal CRM apps require you to open a web app and fill out forms. Juniper is conversational: you text it naturally, like talking to a friend, and it extracts the details automatically. It lives in Telegram so there is no new app to install. And instead of just storing data, Juniper notices when you're losing touch with someone and writes the first message for you.</p>
           </div>
         </div>
 
