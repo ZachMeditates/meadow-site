@@ -25,7 +25,7 @@ but struggle to keep track of 50+ relationships.
 ## Key Features
 - Natural language interaction logging
 - Smart reminders and birthday alerts
-- Relationship tiers (inner/close/orbit) with overdue nudges
+- Relationship circles (inner/close/orbit) with overdue nudges
 - Weekly briefs with AI-drafted messages
 - Web dashboard with search
 - Contact import from Google Contacts CSV
