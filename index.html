@@ -82,14 +82,6 @@
       },
       {
         "@type": "Question",
-        "name": "What happens to my data if I cancel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can export everything before you cancel. After cancellation, your data is deleted within 30 days. No lock in."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Is there a free trial?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -110,22 +102,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Most personal CRM apps require you to open a web app and fill out forms. Meadow is conversational: you text it naturally and it extracts the details automatically. It also lives in Telegram so there is no new app to install, it notices when you are losing touch with someone, and it writes the first message for you in your weekly brief."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I import contacts from Google Contacts or my phone?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Meadow supports importing contacts from Google Contacts CSV exports. You can also add contacts one at a time by texting Meadow naturally, like 'add my friend Sarah Kim, works at Figma, birthday April 22.'"
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Meadow work on Android and iPhone?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Since Meadow works through Telegram, it runs on any device where Telegram is available: Android, iPhone, iPad, desktop, and web. The web dashboard also works on any browser."
         }
       },
       {
@@ -256,14 +232,6 @@
     </div>
   </section>
 
-
-  <!-- ANSWER PARAGRAPH (AI search citation target) -->
-  <section class="answer" id="what-is-meadow">
-    <div class="container">
-      <h2 class="section-title">What is Meadow?</h2>
-      <p>Meadow is a personal CRM that runs inside Telegram. You text it about your friends in plain language, and it automatically tracks contacts, logs interactions, and builds relationship profiles. Every Monday, it sends a weekly brief with who to reach out to, what to talk about, and a ready-to-send draft message. Hosted plans start at $8/month. Self-hosting with Docker is free. Learn more about <a href="what-is-personal-crm.html">what a personal CRM is</a>, see how <a href="best-personal-crm.html">Meadow compares to other personal CRMs</a>, or read about using Meadow for <a href="personal-crm-for-networking.html">networking</a>, <a href="personal-crm-for-parents.html">parenting</a>, or <a href="stay-in-touch-with-friends.html">staying in touch with friends</a>. Curious about the AI side? Read about <a href="ai-relationship-agent.html">what an AI relationship agent is</a>.</p>
-    </div>
-  </section>
 
   <!-- PROBLEM STATEMENT -->
   <section class="problem">
@@ -457,6 +425,14 @@
   </section>
 
 
+  <!-- SOCIAL PROOF -->
+  <section class="problem">
+    <div class="container">
+      <p class="problem__text" style="font-style: italic; text-align: center;">"I built Meadow because I kept forgetting to call my friends and felt terrible about it. Now it nags me so I don't have to nag myself." <span style="font-style: normal; opacity: 0.7;">- Zach, founder</span></p>
+    </div>
+  </section>
+
+
   <!-- TRUST BAR -->
   <section class="trust" id="privacy">
     <div class="container">
@@ -588,16 +564,6 @@
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>What happens to my data if I cancel?</span>
-            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>You can export everything before you cancel. After cancellation, your data is deleted within 30 days. No lock in, no hostage taking.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
             <span>Is there a free trial?</span>
             <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -623,26 +589,6 @@
           </button>
           <div class="faq__answer">
             <p>Most personal CRM apps require you to open a web app and fill out forms. Meadow is conversational: you text it naturally, like talking to a friend, and it extracts the details automatically. It lives in Telegram so there is no new app to install. And instead of just storing data, Meadow notices when you're losing touch with someone and writes the first message for you.</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span>Can I import contacts from Google Contacts or my phone?</span>
-            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>Yes. Meadow supports importing contacts from Google Contacts CSV exports. You can also add contacts one at a time by texting Meadow naturally, like "add my friend Sarah Kim, works at Figma, birthday April 22."</p>
-          </div>
-        </div>
-
-        <div class="faq__item">
-          <button class="faq__question" aria-expanded="false">
-            <span>Does Meadow work on Android and iPhone?</span>
-            <svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq__answer">
-            <p>Yes. Since Meadow works through Telegram, it runs on any device where Telegram is available: Android, iPhone, iPad, desktop, and web. The web dashboard also works on any browser.</p>
           </div>
         </div>
 
@@ -695,13 +641,8 @@
           <a href="#faq">FAQ</a>
         </nav>
         <nav class="footer__links" aria-label="Content pages">
-          <a href="what-is-personal-crm.html">What Is a Personal CRM?</a>
           <a href="best-personal-crm.html">Best Personal CRMs</a>
-          <a href="stay-in-touch-with-friends.html">Stay in Touch</a>
-          <a href="vs-dex.html">vs Dex</a>
-          <a href="vs-monica.html">vs Monica</a>
-          <a href="vs-clay.html">vs Clay</a>
-          <a href="ai-relationship-agent.html">AI Agent</a>
+          <a href="vs-monica.html">Meadow vs Monica</a>
         </nav>
       </div>
       <div class="footer__bottom">
