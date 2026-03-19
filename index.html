@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meadow | Personal CRM to Stay in Touch with Friends</title>
-  <meta name="description" content="Meadow is a personal CRM that lives in Telegram. Track friendships, get birthday reminders, and weekly briefs on who to reach out to and what to say. Free during beta." />
+  <meta name="description" content="Meadow is a personal CRM that lives in Telegram. Track friendships, get birthday reminders, and weekly briefs on who to reach out to and what to say. Free during early access." />
   <link rel="canonical" href="https://zachmeditates.github.io/meadow-site/" />
   <meta name="theme-color" content="#22c55e" />
 
@@ -173,10 +173,25 @@
     "@type": "Organization",
     "name": "Meadow",
     "url": "https://zachmeditates.github.io/meadow-site/",
+    "logo": "https://zachmeditates.github.io/meadow-site/favicon.svg",
     "founder": {
       "@type": "Person",
       "name": "Zach"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Meadow",
+        "item": "https://zachmeditates.github.io/meadow-site/"
+      }
+    ]
   }
   </script>
 </head>
@@ -241,6 +256,14 @@
     </div>
   </section>
 
+
+  <!-- ANSWER PARAGRAPH (AI search citation target) -->
+  <section class="answer" id="what-is-meadow">
+    <div class="container">
+      <h2 class="section-title">What is Meadow?</h2>
+      <p>Meadow is a personal CRM that runs inside Telegram. You text it about your friends in plain language, and it automatically tracks contacts, logs interactions, and builds relationship profiles. Every Monday, it sends a weekly brief with who to reach out to, what to talk about, and a ready-to-send draft message. Hosted plans start at $8/month. Self-hosting with Docker is free. Learn more about <a href="what-is-personal-crm.html">what a personal CRM is</a>, see how <a href="best-personal-crm.html">Meadow compares to other personal CRMs</a>, or read about using Meadow for <a href="personal-crm-for-networking.html">networking</a>, <a href="personal-crm-for-parents.html">parenting</a>, or <a href="stay-in-touch-with-friends.html">staying in touch with friends</a>.</p>
+    </div>
+  </section>
 
   <!-- PROBLEM STATEMENT -->
   <section class="problem">
@@ -509,7 +532,7 @@
               Isolated database. Export anytime.
             </li>
           </ul>
-          <a href="#signup" class="btn btn--lg pricing__cta">Join the Waitlist</a>
+          <a href="#signup" class="btn btn--lg pricing__cta">Get Early Access</a>
         </div>
 
         <div class="pricing__card">
@@ -536,7 +559,7 @@
               Full control over your data
             </li>
           </ul>
-          <a href="#signup" class="btn btn--lg btn--ghost pricing__cta">Join the Waitlist</a>
+          <a href="#signup" class="btn btn--lg btn--ghost pricing__cta">Get Early Access</a>
         </div>
 
       </div>
@@ -646,7 +669,7 @@
       <p class="cta__sub">We're launching soon. Drop your email and we'll let you know.</p>
       <form class="cta__form" id="signup-form">
         <input type="email" placeholder="you@example.com" required class="cta__input" />
-        <button type="submit" class="btn btn--lg">Join the Waitlist</button>
+        <button type="submit" class="btn btn--lg">Get Early Access</button>
       </form>
       <p class="cta__fine">Free during early access. No spam, ever.</p>
       <div class="cta__success" id="cta-success">
@@ -670,6 +693,14 @@
           <a href="#privacy">Privacy</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
+        </nav>
+        <nav class="footer__links" aria-label="Content pages">
+          <a href="what-is-personal-crm.html">What Is a Personal CRM?</a>
+          <a href="best-personal-crm.html">Best Personal CRMs</a>
+          <a href="stay-in-touch-with-friends.html">Stay in Touch</a>
+          <a href="vs-dex.html">vs Dex</a>
+          <a href="vs-monica.html">vs Monica</a>
+          <a href="vs-clay.html">vs Clay</a>
         </nav>
       </div>
       <div class="footer__bottom">
@@ -745,7 +776,7 @@
         success.style.display = 'block';
       } catch (err) {
         btn.disabled = false;
-        btn.textContent = 'Join the Waitlist';
+        btn.textContent = 'Get Early Access';
         if (!errorEl) {
           var p = document.createElement('p');
           p.id = 'cta-error';
